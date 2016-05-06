@@ -10,17 +10,18 @@ function collapseNavbar() {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
         $(".brand-heading").addClass("fadeOutLeft");
         $(".brand-heading").removeClass("fadeInLeft");
+
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
         $(".brand-heading").addClass("fadeInLeft");
         $(".brand-heading").removeClass("fadeOutLeft");
+
     }
 
 }
 
 
 $(window).scroll(collapseNavbar);
-$(window).scroll(logoOut);
 $(document).ready(collapseNavbar);
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -40,12 +41,3 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
   }
 });
-
- function logoOut () {
-  if ($(".brand-heading").offset().top > 50){
-
-
-  $(".brand-heading").addClass(".animate",".fadeOutLeft")
-
-}
-}
